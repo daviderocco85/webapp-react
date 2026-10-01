@@ -6,7 +6,6 @@ export const Layout = () => (
         <header>
             <nav>
                 <NavLink to='/'>Home</NavLink>
-                <NavLink to='/dettaglio-monumento'>Dettaglio Monumento</NavLink>
             </nav>
         </header>
         <main>
