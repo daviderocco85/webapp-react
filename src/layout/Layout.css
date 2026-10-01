@@ -1,0 +1,19 @@
+.layout {
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.layout header {
+    padding: .5rem 1rem;
+    border-bottom: 1px solid #5d925d;
+}
+
+.layout header nav {
+    display: flex;
+    gap: .5rem;
+}
+
+.layout main {
+    overflow: auto;
+}
