@@ -7,7 +7,7 @@ export const App = () => (
   <Routes>
     <Route element={<Layout />}>
       <Route index element={<MonumentIndex />} />
-      <Route path='dettaglio-monumento' element={<MonumentDetail />} />
+      <Route path='/:id' element={<MonumentDetail />} />
     </Route>
   </Routes>
 );
