@@ -1,21 +1,44 @@
-.monument-detail .review-card {
-    border: 1px solid lightgray;
-    border-radius: 5px;
-    padding: 0.5rem 1rem;
+.review-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    padding: 1.2rem;
+    background-color: #ffffff;
+    border: 1px solid #dfe9e5;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(38, 75, 64, 0.05);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
-.monument-detail .review-card .text {
-    margin-bottom: .5rem;
+.review-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(38, 75, 64, 0.09);
 }
 
-.monument-detail .review-card .vote-container {
-    font-weight: bold;
+.review-card .text {
+    margin: 0;
+    color: #465752;
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
 
-.monument-detail .review-card .vote-container>*+* {
-    margin-left: 2px;
+.review-card .vote-container {
+    margin: 0;
+    color: #2f7d68;
+    font-size: 0.9rem;
+    font-weight: 600;
 }
 
-.monument-detail .review-card .name {
-    font-style: italic;
+.review-card .vote-container span {
+    color: #71807b;
+    font-weight: 400;
+}
+
+.review-card .name {
+    margin: 0.2rem 0 0;
+    color: #24332f;
+    font-size: 0.85rem;
+    font-weight: 600;
 }
