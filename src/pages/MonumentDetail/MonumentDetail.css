@@ -1,0 +1,27 @@
+.monument-detail {
+    padding-top: 0.5rem;
+}
+
+.monument-detail .hr {
+    height: 1px;
+    background-color: lightgray;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+}
+
+.monument-detail .review-heading {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.monument-detail .review-heading>h2 {
+    font-size: 1.2rem;
+}
+
+
+.monument-detail .reviews {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
