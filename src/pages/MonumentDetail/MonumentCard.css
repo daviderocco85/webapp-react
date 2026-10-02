@@ -1,20 +1,91 @@
 .monument-detail .monument-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1rem;
-    border: 1px solid grey;
-    border-radius: .25rem;
-    padding: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: #ffffff;
+    border: 1px solid #dfe9e5;
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(38, 75, 64, 0.06);
+    overflow: hidden;
 }
-
 
 .monument-detail .monument-card .cover {
-    max-width: 250px;
+    grid-column: 1;
+    grid-row: auto;
+    width: 100%;
+    height: auto;
+}
+
+.monument-detail .monument-card .cover img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.monument-index .monument-card:hover .cover img {
+    transform: scale(1.03);
+}
+
+.monument-detail .monument-card .monument {
+    grid-column: 1;
+    margin: 2rem 2rem 20px;
+    color: #24332f;
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.monument-detail .monument-card .city {
+    grid-column: 1;
+    margin: 0rem 2rem 2px;
+    color: #71807b;
+    font-size: 0.95rem;
+}
+
+.monument-detail .monument-card .abstract {
+    grid-column: 1;
+    margin: 1rem 2rem 10px;
+    color: #596963;
+    font-size: 0.95rem;
+    line-height: 1.65;
 }
 
 
-.monument-detail .monument-card .city {
 
-    font-style: italic;
+
+@media (min-width: 600px) {
+
+    .monument-detail .monument-card {
+        grid-template-columns: 380px 1fr;
+    }
+
+    .monument-detail .monument-card .cover {
+        grid-column: 1;
+        grid-row: 1 / 5;
+        height: 100%;
+    }
+
+    .monument-detail .monument-card .cover img {
+        height: 100%;
+    }
+
+    .monument-detail .monument-card .monument,
+    .monument-detail .monument-card .city,
+    .monument-detail .monument-card .abstract {
+        grid-column: 2;
+    }
+
+    .monument-detail .monument-card .monument {
+        margin: 10rem 2rem 39px;
+    }
+
+    .monument-detail .monument-card .city {
+        margin: 0.4rem 2rem 0;
+    }
+
+    .monument-detail .monument-card .abstract {
+        margin: 1rem 2rem 0;
+    }
 }
