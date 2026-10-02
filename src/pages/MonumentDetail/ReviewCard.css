@@ -1,0 +1,21 @@
+.monument-detail .review-card {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+}
+
+.monument-detail .review-card .text {
+    margin-bottom: .5rem;
+}
+
+.monument-detail .review-card .vote-container {
+    font-weight: bold;
+}
+
+.monument-detail .review-card .vote-container>*+* {
+    margin-left: 2px;
+}
+
+.monument-detail .review-card .name {
+    font-style: italic;
+}
