@@ -1,19 +1,70 @@
 .monument-index {
-    padding: 1rem;
+    padding: 0.5rem 0;
 }
 
+
 .monument-index h1 {
-    color: #8b5e3c;
+    margin: 0;
+    color: #24332f;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+}
+
+.monument-index h1::after {
+    content: "";
+    display: block;
+    width: 42px;
+    height: 4px;
+    margin-top: 0.75rem;
+    background-color: #e8a44a;
+    border-radius: 999px;
 }
 
 .monument-index p.subtitle {
-    margin-top: 5px;
-    font-weight: bold;
+    margin: 0.8rem 0 0;
+    color: #71807b;
+    font-size: 1rem;
+    font-weight: 400;
 }
 
+
 .monument-index .monuments-grid {
-    margin-top: 2rem;
+    margin-top: 2.5rem;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: .5rem;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+
+
+@media (min-width: 600px) {
+
+    .monument-index .monuments-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+@media (min-width: 900px) {
+
+    .monument-index.container {
+        max-width: 1000px;
+    }
+
+    .monument-index .monuments-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .monument-index.container {
+        max-width: 1200px;
+
+    }
+
+    .monument-index .monuments-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
 }
