@@ -1,0 +1,20 @@
+.monument-detail .monument-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    border: 1px solid grey;
+    border-radius: .25rem;
+    padding: 1rem;
+}
+
+
+.monument-detail .monument-card .cover {
+    max-width: 250px;
+}
+
+
+.monument-detail .monument-card .city {
+
+    font-style: italic;
+}
