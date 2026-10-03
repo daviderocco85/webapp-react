@@ -48,6 +48,9 @@
 }
 
 .monument-index .monument-card .city {
+    display: flex;
+    align-items: center;
+    gap: 5px;
     margin: 0.35rem 1.2rem 0;
     color: #71807b;
     font-size: 0.9rem;
@@ -78,7 +81,7 @@
     justify-content: center;
     width: 100%;
     padding: 0.7rem 1rem;
-    background-color: #2f7d68;
+    background-color: #2ca9bc;
     color: #ffffff;
     text-decoration: none;
     border-radius: 8px;
@@ -91,7 +94,7 @@
 }
 
 .monument-index .monument-card .detail a:hover {
-    background-color: #246653;
+    background-color: #2ca9bc;
     transform: translateY(-1px);
     box-shadow: 0 4px 10px rgba(47, 125, 104, 0.22);
 }
