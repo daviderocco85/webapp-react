@@ -1,3 +1,4 @@
+import { Place } from '../../components/Place';
 import './MonumentCard.css';
 
 
@@ -9,7 +10,7 @@ export const MonumentCard = props => (
             </div>
         }
         <p className="monument">{props.monument.monument}</p>
-        <p className="city">Luogo - {props.monument.city}</p>
+        <p className="city"><Place /> {props.monument.city}</p>
         {props.monument.abstract && <p className="abstract">Descrizione - {props.monument.abstract}</p>}
     </div>
 );
