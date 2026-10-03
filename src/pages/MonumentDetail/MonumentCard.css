@@ -38,6 +38,9 @@
 }
 
 .monument-detail .monument-card .city {
+    display: flex;
+    align-items: center;
+    gap: 5px;
     grid-column: 1;
     margin: 0rem 2rem 2px;
     color: #71807b;
