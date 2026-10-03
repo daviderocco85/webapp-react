@@ -4,6 +4,7 @@ import { MonumentCard } from './MonumentCard';
 import { ReviewCard } from './ReviewCard';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Vote } from '../../components/Vote';
 
 export const MonumentDetail = () => {
     const { id } = useParams();
@@ -22,6 +23,9 @@ export const MonumentDetail = () => {
             <div className="hr"></div>
             <div className="review-heading">
                 <h2>Recensioni</h2>
+                {monument && <p className='average-vote'>
+                    <span>Media Voti: </span>
+                    <Vote vote={monument.average_vote} /></p>}
             </div>
             <div className="reviews">
                 {monument && monument.reviews.map(review => <ReviewCard key={review.id} review={review} />)}
