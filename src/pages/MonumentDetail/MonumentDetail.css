@@ -15,6 +15,7 @@
 .monument-detail .review-heading {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     margin-bottom: 1.5rem;
 }
 
@@ -33,6 +34,13 @@
     margin-top: 0.6rem;
     background-color: #e8a44a;
     border-radius: 999px;
+}
+
+.monument-detail .review-heading .average-vote {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin: 0;
 }
 
 
