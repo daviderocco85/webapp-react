@@ -4,7 +4,7 @@
     display: grid;
     grid-template-columns: 1fr;
     background-color: #ffffff;
-    border: 1px solid #dfe9e5;
+    border: 1px solid #e0c4b4;
     border-radius: 14px;
     box-shadow: 0 4px 18px rgba(38, 75, 64, 0.06);
     overflow: hidden;
@@ -30,9 +30,9 @@
 
 .monument-detail .monument-card .monument {
     grid-column: 1;
-    margin: 2rem 2rem 20px;
-    color: #24332f;
-    font-size: 1.7rem;
+    margin: 1.2rem 2rem 20px;
+    color: var(--color-background);
+    font-size: 2rem;
     font-weight: 700;
     line-height: 1.25;
 }
@@ -44,7 +44,7 @@
     grid-column: 1;
     margin: 0rem 2rem 2px;
     color: #71807b;
-    font-size: 0.95rem;
+    font-size: 1rem;
 }
 
 .monument-detail .monument-card .abstract {
@@ -52,6 +52,7 @@
     margin: 1rem 2rem 10px;
     color: #596963;
     font-size: 0.95rem;
+    font-weight: 600;
     line-height: 1.65;
 }
 
