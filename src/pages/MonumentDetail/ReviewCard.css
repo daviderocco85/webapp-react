@@ -3,8 +3,8 @@
     flex-direction: column;
     gap: 0.7rem;
     padding: 1.2rem;
-    background-color: #ffffff;
-    border: 1px solid #dfe9e5;
+    background-color: white;
+    border: 2px solid #e0c4b4;
     border-radius: 12px;
     box-shadow: 0 3px 12px rgba(38, 75, 64, 0.05);
     transition:
@@ -19,8 +19,9 @@
 
 .review-card .text {
     margin: 0;
+    font-weight: 600;
     color: #465752;
-    font-size: 0.95rem;
+    font-size: 0.99rem;
     line-height: 1.6;
 }
 
@@ -29,19 +30,17 @@
     align-items: center;
     gap: 0.3rem;
     margin: 0;
-    color: #2f7d68;
-    font-size: 0.9rem;
-    font-weight: 600;
 }
 
 .review-card .vote-container span {
     color: #71807b;
-    font-weight: 400;
+    font-size: 0.9rem;
+    font-weight: 600;
 }
 
 .review-card .name {
     margin: 0.2rem 0 0;
-    color: #24332f;
+    color: var(--color-background);
     font-size: 0.85rem;
     font-weight: 600;
 }
