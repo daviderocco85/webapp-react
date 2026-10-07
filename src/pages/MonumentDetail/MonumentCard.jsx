@@ -10,7 +10,7 @@ export const MonumentCard = props => (
             </div>
         }
         <p className="monument">{props.monument.monument}</p>
-        <p className="city"><Place /> {props.monument.city}</p>
-        {props.monument.abstract && <p className="abstract">Descrizione - {props.monument.abstract}</p>}
+        <p className="city"><Place /> {props.monument.city}, {props.monument.region}</p>
+        {props.monument.abstract && <p className="abstract"> 🏛️ {props.monument.abstract}</p>}
     </div>
 );
