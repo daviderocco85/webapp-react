@@ -1,43 +1,30 @@
 :root {
-    --color-primary: #2f7d68;
-    --color-primary-dark: #246653;
-    --color-primary-light: #e7f4ef;
-    --color-accent: #e8a44a;
-    --color-background: #f5f8f7;
+    --color-background: #13233A;
     --color-surface: #ffffff;
-    --color-text: #24332f;
-    --color-text-muted: #71807b;
+    --color-text-muted: #606966;
     --color-border: #dfe9e5;
     --shadow-soft: 0 4px 20px rgba(38, 75, 64, 0.07);
 }
-
 
 
 .layout {
     min-height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr auto;
-    background:
-        radial-gradient(circle at top right,
-            rgba(47, 125, 104, 0.08),
-            transparent 30rem),
-        var(--color-background);
+    background-color: var(--color-background);
     color: var(--color-text);
 }
 
 
-
-
 header {
-    background-color: rgba(255, 255, 255, 0.92);
-    border-bottom: 1px solid var(--color-border);
-    box-shadow: var(--shadow-soft);
-    backdrop-filter: blur(10px);
+    background-color: var(--color-background);
+    border-bottom: 1px solid #e0c4b4;
 }
 
-.header-inner {
+
+header .header-inner {
     width: min(100% - 2rem, 1200px);
-    min-height: 70px;
+    min-height: 45px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -45,27 +32,23 @@ header {
 }
 
 
-
-
 .brand {
     display: flex;
     align-items: center;
     gap: 0.55rem;
-    color: var(--color-text);
-    font-size: 1.1rem;
+    font-size: (0.875rem, 0.9rem + 0.3vw, 1rem);
     font-weight: 700;
     letter-spacing: -0.02em;
 }
 
-.brand-dot {
-    width: 11px;
-    height: 11px;
-    background-color: var(--color-accent);
-    border-radius: 50%;
-    box-shadow: 0 0 0 4px rgba(232, 164, 74, 0.15);
+
+.brand h3 span.italia {
+    color: #e63946;
 }
 
-
+.brand h3 span.meravigliosa {
+    color: #e0c4b4
+}
 
 
 nav {
@@ -79,7 +62,7 @@ nav {
     padding: 0.55rem 0.9rem;
     color: var(--color-text-muted);
     text-decoration: none;
-    font-size: 0.92rem;
+    font-size: clamp(1rem, 0.9rem + 0.5vw, 1.2rem);
     font-weight: 600;
     border-radius: 8px;
     transition:
@@ -89,14 +72,13 @@ nav {
 }
 
 .link:hover {
-    color: var(--color-primary);
-    background-color: var(--color-primary-light);
-    transform: translateY(-1px);
+    color: #e0c4b4;
+    transform: translateY(-2px);
 }
 
 .link--active {
-    color: var(--color-primary);
-    background-color: var(--color-primary-light);
+    color: #e0c4b4;
+    background-color: var(--color-background);
 }
 
 .link--active::after {
@@ -106,29 +88,99 @@ nav {
     bottom: 3px;
     width: 16px;
     height: 2px;
-    background-color: var(--color-accent);
+    background-color: #e0c4b4;
     border-radius: 999px;
     transform: translateX(-50%);
 }
 
 
+.breadcrumb-link {
+    position: relative;
+    padding: 0.55rem 0.9rem;
+    color: #e0c4b4;
+    text-decoration: none;
+    font-size: clamp(1rem, 0.9rem + 0.5vw, 1.2rem);
+    font-weight: 600;
+    border-radius: 8px;
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.breadcrumb-link:hover {
+    color: #e0c4b4;
+    transform: translateY(-2px);
+}
+
+.breadcrumb-separator {
+    font-size: 1.2rem;
+    color: var(--color-text-muted);
+    margin: 0 0.15rem;
+}
+
+.breadcrumb-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 3px;
+    width: 16px;
+    height: 2px;
+    background-color: #e0c4b4;
+    border-radius: 999px;
+    transform: translateX(-50%);
+}
+
+
+.loader-container {
+    display: grid;
+    place-items: center;
+    min-height: 500px;
+}
+
+
+.loader-container>* {
+    margin: auto;
+}
+
+.layout .error {
+    flex-grow: 1;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: red;
+}
 
 
 main {
-    overflow: auto;
+    width: 100%;
 }
 
-.content {
+
+
+main .image {
+    background: url("../assets/background_image/sky_line_1.jpg");
+    background-size: 100% auto;
+    background-position: center top;
+    background-repeat: no-repeat;
+    min-height: 38.95vw;
+}
+
+
+
+
+main .image .content {
     width: min(100% - 2rem, 1200px);
     margin: 0 auto;
-    padding: 2.5rem 0 3.5rem;
+    padding: 1.5rem 0 2.5rem;
 }
 
 
 
 footer {
-    background-color: #ffffff;
-    border-top: 1px solid var(--color-border);
+    background-color: var(--color-background);
+    border-top: 1px solid #e0c4b4;
 }
 
 .footer-inner {
@@ -139,44 +191,54 @@ footer {
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    color: var(--color-text-muted);
-    font-size: 0.82rem;
+    color: #e0c4b4;
+    font-size: 0.92rem;
 }
 
-.footer-inner span:first-child {
-    color: var(--color-primary);
+
+.footer-inner p .italia {
     font-weight: 700;
+    color: #e63946;
 }
 
-.footer-separator {
-    color: var(--color-accent);
+.footer-inner p .meravigliosa {
+    font-weight: 700;
+
 }
 
 
 
 
-@media (max-width: 600px) {
+/* TABLET */
+@media (min-width: 600px) {
 
     .header-inner,
     .content,
     .footer-inner {
-        width: min(100% - 1.5rem, 1200px);
+        width: min(100% - 2rem, 1200px);
     }
 
-    .header-inner {
-        min-height: 62px;
-    }
+
 
     .brand {
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
 
     .link {
-        padding: 0.5rem 0.7rem;
+        padding: 0.55rem 0.9rem;
     }
 
-    .content {
-        padding-top: 1.5rem;
-        padding-bottom: 2.5rem;
+    main .image .content {
+        padding: 2rem 0 3rem;
     }
+}
+
+
+/* DESKTOP */
+@media (min-width: 900px) {
+
+    main .image .content {
+        padding: 2.5rem 0 3.5rem;
+    }
+
 }
