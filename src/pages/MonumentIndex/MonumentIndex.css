@@ -4,49 +4,65 @@
 
 
 .monument-index h1 {
-    margin: 0;
-    color: #24332f;
-    font-size: clamp(2rem, 4vw, 2.8rem);
+    color: var(--color-background);
+    font-size: clamp(0.7rem, 4vw, 3.8rem);
     line-height: 1.15;
     letter-spacing: -0.03em;
 }
 
-.monument-index h1::after {
-    content: "";
-    display: block;
-    width: 42px;
-    height: 4px;
-    margin-top: 0.75rem;
-    background-color: #e8a44a;
-    border-radius: 999px;
-}
 
 .monument-index p.subtitle {
-    margin: 0.8rem 0 0;
-    color: #71807b;
-    font-size: 1rem;
-    font-weight: 400;
+    color: var(--color-background);
+    font-size: clamp(0.1rem, 2vw, 1.1rem);
+    font-weight: 600;
+}
+
+.monument-index .monuments-carousel {
+    display: grid;
+    grid-template-columns: 44px minmax(0, 1fr) 44px;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    margin-top: clamp(1.6rem, 25vw, 19rem);
 }
 
 
 .monument-index .monuments-grid {
-    margin-top: 2.5rem;
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
+    min-width: 0;
+    align-items: start;
 }
 
-.monument-index .loader-container {
-    display: grid;
-    place-items: center;
-    min-height: 500px;
+.monument-index .monuments-carousel .carousel-button {
+    flex-shrink: 0;
+    border: none;
+    background: transparent;
+    color: #e0c4b4;
+    font-size: 4rem;
+    cursor: pointer;
+    box-shadow: none;
+    padding: 0;
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.monument-index .monuments-carousel .carousel-button:hover:not(:disabled) {
+    background: transparent;
+    color: #606966;
+    transform: scale(1.15);
+}
+
+.monument-index .monuments-carousel .carousel-button:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
 }
 
 
-.monument-index .loader-container>* {
-    margin: auto;
-}
 
+/* TABLET */
 
 @media (min-width: 600px) {
 
@@ -56,7 +72,11 @@
 
 }
 
+
+/* DESKTOP */
+
 @media (min-width: 900px) {
+
 
     .monument-index.container {
         max-width: 1000px;
@@ -67,11 +87,12 @@
     }
 }
 
-@media (min-width: 1200px) {
 
+/* LARGE DESKTOP */
+
+@media (min-width: 1200px) {
     .monument-index.container {
         max-width: 1200px;
-
     }
 
     .monument-index .monuments-grid {
