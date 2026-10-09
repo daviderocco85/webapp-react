@@ -50,8 +50,8 @@
 }
 
 .review-form textarea {
-    min-height: 100px;
-    resize: vertical;
+    min-height: 120px;
+    resize: none;
 }
 
 .review-form button {
