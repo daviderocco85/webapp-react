@@ -51,6 +51,20 @@ export const MonumentIndex = () => {
         };
     }, []);
 
+
+    useEffect(() => {
+        if (!monuments) return;
+
+        const maxIndex = Math.max(
+            monuments.length - visibleCards,
+            0
+        );
+
+        if (currentIndex > maxIndex) {
+            setCurrentIndex(maxIndex);
+        }
+    }, [visibleCards, monuments, currentIndex]);
+
     const handlePrevious = () => {
         setCurrentIndex(prev => Math.max(prev - 1, 0));
     };
