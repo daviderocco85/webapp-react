@@ -13,30 +13,36 @@ export const MonumentDetail = () => {
     const { loader, breadcrumb } = useGlobal();
     const [monument, setMonument] = useState(null);
 
-    const loadMonument = () => {
+    const loadMonument = (showLoader = true) => {
         if (Number.isNaN(Number(id))) {
-            loader.error('Page not found.');
+            if (showLoader) loader.error('Page not found.');
             return;
         }
 
-        loader.loading();
+        if (showLoader) loader.loading();
 
         axios.get(`${import.meta.env.VITE_API_URL}/monuments/detail/${id}`)
             .then(res => {
-                loader.success(res.data);
+                if (showLoader) loader.success(res.data);
+
                 breadcrumb.monument(res.data.monument);
                 setMonument(res.data);
             })
             .catch(err => {
-                const isNotFound = err.status === 404;
-                const msg = isNotFound ? 'Monument not found.' : 'Monument loading failed.';
+                const isNotFound = err.response?.status === 404;
+                const msg = isNotFound
+                    ? 'Monument not found.'
+                    : 'Monument loading failed.';
+
                 console.error(msg, err);
-                loader.error(msg);
+
+                if (showLoader) loader.error(msg);
             });
     };
 
-    useEffect(() => loadMonument(false), [id]);
 
+
+    useEffect(() => loadMonument(), [id]);
     if (loader.state.step !== 'idle') return null;
 
     return (
@@ -53,7 +59,7 @@ export const MonumentDetail = () => {
             <div className="reviews">
                 {monument && monument.reviews.map(review => <ReviewCard key={review.id} review={review} />)}
             </div>
-            <ReviewForm onPublished={() => { loadMonument(true) }} />
+            <ReviewForm onPublished={() => { loadMonument(false) }} />
         </div>
     );
 };
