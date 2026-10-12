@@ -16,7 +16,7 @@ Front-end della Web App realizzata con React + Vite, dedicata a più bei monumen
 
 
 # Struttura del Front-end
-
+```text
 webapp-react/
 ├── public/
 │   └── favicon.ico
@@ -63,8 +63,8 @@ webapp-react/
 ├── package-lock.json
 ├── package.json
 ├── README.md
-└── vite.config.js
-
+└── vite.config.js`
+```
 
 ## Organizzazione 
 
