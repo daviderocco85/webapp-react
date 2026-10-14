@@ -84,7 +84,9 @@ Il front-end è organizzato in componenti riutilizzabili e moduli funzionali con
 
 - **File di configurazione**: includono le configurazioni di Vite, le dipendenze del progetto, le variabili d'ambiente di esempio e le impostazioni Git.
 
+## Back-end
 
+Il back-end della Web App è disponibile nella repo [webapp-express](https://github.com/daviderocco85/webapp-express)
 
 
 
